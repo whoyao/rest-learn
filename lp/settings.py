@@ -25,7 +25,7 @@ SECRET_KEY = '_*s0#vj6qdw@9-9$o)tb_^gfw@vz=phxc479n9-5_1gycgwa9o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['202.120.37.147']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'test1.apps.Test1Config',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,12 @@ WSGI_APPLICATION = 'lp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'project_test',
+        'HOST':'',
+        'PORT':'3306',
+        'USER':'cybernp',
+        'PASSWORD':'cyber215',
     }
 }
 
